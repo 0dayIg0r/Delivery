@@ -20,7 +20,8 @@ const Home = () => {
         </div>
         <div className={styles.headerBottom}>
           <SearchInput
-          
+            mainColor='#FB4900'
+            onSearch={() => null}
           />
         </div>
       </header>
