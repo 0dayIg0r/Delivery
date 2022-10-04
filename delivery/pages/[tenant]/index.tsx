@@ -2,6 +2,11 @@ import { SearchInput } from '../../components/SearchInput'
 import styles from '../../styles/Home.module.css'
 
 const Home = () => {
+
+  const handleSearch = (searchValue: string ) =>{
+    console.log(`Você está digitando ${searchValue}`)
+  }
+
   return (
     <div className={styles.container}>
       <header className={styles.header}>
@@ -21,7 +26,7 @@ const Home = () => {
         <div className={styles.headerBottom}>
           <SearchInput
             mainColor='#FB4900'
-            onSearch={() => null}
+            onSearch={handleSearch}
           />
         </div>
       </header>
