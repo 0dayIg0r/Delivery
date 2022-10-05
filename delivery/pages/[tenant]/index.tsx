@@ -32,7 +32,7 @@ const Home = () => {
         </div>
       </header>
 
-      <Banner/>g
+      <Banner/>
 
     </div>
   )
