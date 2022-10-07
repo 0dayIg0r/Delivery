@@ -34,6 +34,7 @@ export const SearchInput = ({ mainColor, onSearch }: Props) => {
                 value={searchValue}
                 onChange={(e) =>setSearchValue(e.target.value)}
             />
+
         </div>
     )
 }

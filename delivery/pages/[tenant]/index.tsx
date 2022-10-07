@@ -1,4 +1,5 @@
 import { Banner } from '../../components/Banner'
+import { ProductItem } from '../../components/ProductItem'
 import { SearchInput } from '../../components/SearchInput'
 import styles from '../../styles/Home.module.css'
 
@@ -34,6 +35,31 @@ const Home = () => {
 
       <Banner/>
 
+      <div className={styles.grid}>
+                <ProductItem
+                data={{
+                  id: 1,
+                  image:'/tmp/burger.png',
+                  categoryName: 'Tradicional',
+                  name: 'Texas Burger',
+                  price:'25,50'
+              }}
+                mainColor='#FB9400'
+                secondColor='##FFF9F2'
+                />
+                <ProductItem
+                data={{
+                  id: 2,
+                  image:'/tmp/burger.png',
+                  categoryName: 'Tradicional',
+                  name: 'Texas Burger',
+                  price:'25,50'
+              }}
+                mainColor='#FB9400'
+                secondColor='##FFF9F2'
+                />
+                
+            </div>
     </div>
   )
 }
