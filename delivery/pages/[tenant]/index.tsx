@@ -38,7 +38,6 @@ const Home = (data: Props) => {
         </div>
         <div className={styles.headerBottom}>
           <SearchInput
-            mainColor='#FB4900'
             onSearch={handleSearch}
           />
         </div>
@@ -55,8 +54,7 @@ const Home = (data: Props) => {
             name: 'Texas Burger',
             price: '25,50'
           }}
-          mainColor={data.tenant.mainColor}
-          secondColor={data.tenant.secondColor}
+          
         />
         <ProductItem
           data={{
@@ -66,8 +64,6 @@ const Home = (data: Props) => {
             name: 'Texas Burger',
             price: '25,50'
           }}
-          mainColor={data.tenant.mainColor}
-          secondColor={data.tenant.secondColor}
         />
 
       </div>
