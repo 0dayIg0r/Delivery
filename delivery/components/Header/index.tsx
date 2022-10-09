@@ -21,7 +21,7 @@ export const Header = ({ backHref, color, title, subtitle }: Props) => {
                 {title && <div className={styles.title}>{title}</div>}
                 {subtitle && <div className={styles.subTitle}>{subtitle}</div>}
             </div>
-            <div className={styles.rightSide}>gg</div>
+            <div className={styles.rightSide}></div>
         </div>
     )
 }
