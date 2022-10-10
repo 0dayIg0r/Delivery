@@ -32,10 +32,7 @@ const SignUp = (data: Props) => {
     const handleSubmit = () => {
         router.push(`/${data.tenant.slug}/signup`)
     }
-    const handleSignup = () => {
-
-    }
-
+  
 
 
     return (

@@ -14,13 +14,13 @@ import { Tenant } from '../../types/Tenant'
 
 const Forget = (data: Props) => {
     const { tenant, setTenant } = useAppContext()
-
+    const router = useRouter()
     useEffect(() => {
         setTenant(data.tenant)
     }, [])
 
     const handleSubmit = () => {
-        
+        router.push(`/${data.tenant.slug}/forget-success`)
     }
 
     const [email, setEmail] = useState('')
