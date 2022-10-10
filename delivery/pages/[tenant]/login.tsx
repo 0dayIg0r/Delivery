@@ -19,21 +19,25 @@ const Login = (data: Props) => {
         setTenant(data.tenant)
     }, [])
 
+    const router = useRouter()
+
     const handleSearch = (searchValue: string) => {
         console.log(`Você está digitando ${searchValue}`)
     }
 
+    const handleSubmit = () => {
+        
+    }
+
+    
+    const handleSignUp = () => {
+      router.push(`/${data.tenant.slug}/signup`)
+    }
+    
+
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
-    const router = useRouter()
-
-    const handleSubmit = () => {
-        router.push(`/${data.tenant.slug}/signup`)
-    }
-    const handleSignup = () => {
-
-    }
 
 
 
@@ -49,16 +53,16 @@ const Login = (data: Props) => {
             />
 
             <div className={styles.header}>{data.tenant.name}</div>
-            <div 
-            className={styles.subtitle}
-            style={{borderBottomColor: data.tenant.mainColor}}
+            <div
+                className={styles.subtitle}
+                style={{ borderBottomColor: data.tenant.mainColor }}
             >
                 Use suas credenciais para realizar o login.
             </div>
-            <div className={styles.line}></div>
-            <div className={styles.formArea}>
+            <div className={styles.line} ></div>
+            <div className={styles.formArea} >
 
-                <div className={styles.inputArea}>
+                <div className={styles.inputArea} >
                     <InputField
                         color={data.tenant.mainColor}
                         placeholder={'Digite seu e-mail'}
@@ -67,7 +71,7 @@ const Login = (data: Props) => {
                     />
                 </div>
 
-                <div className={styles.inputArea}>
+                <div className={styles.inputArea} >
                     <InputField
                         color={data.tenant.mainColor}
                         placeholder={'Digite sua senha'}
@@ -87,20 +91,19 @@ const Login = (data: Props) => {
                 </div>
             </div>
 
-            <div 
-            className={styles.forgetArea}
-            style={{borderBottomColor: data.tenant.mainColor}}
+            <div
+                className={styles.forgetArea}
+                style={{ borderBottomColor: data.tenant.mainColor }}
             >
-                Esqueceu sua senha? <Link href={`/${data.tenant.slug}/forget`}><a style={{color: data.tenant.mainColor}}>Clique Aqui</a></Link>
+                Esqueceu sua senha? <Link href={`/${data.tenant.slug}/forget`}><a style={{ color: data.tenant.mainColor }}>Clique Aqui</a></Link>
             </div>
 
             <div className={styles.signupArea}>
                 <Button
                     color={data.tenant.mainColor}
                     label='Quero me cadastrar'
-                    onClick={handleSignup}
+                    onClick={handleSignUp}
                 />
-
             </div>
         </div>
     )

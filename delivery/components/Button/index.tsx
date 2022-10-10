@@ -16,7 +16,7 @@ export const Button = ({
     return(
         <div 
         className={style.container}
-        onClick={() => onclick}
+        onClick={onClick}
         style={{
             color: fill ? '#FFF' : color,
             borderColor: color,
