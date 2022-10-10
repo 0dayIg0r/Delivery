@@ -21,10 +21,6 @@ const Login = (data: Props) => {
 
     const router = useRouter()
 
-    const handleSearch = (searchValue: string) => {
-        console.log(`Você está digitando ${searchValue}`)
-    }
-
     const handleSubmit = () => {
         
     }

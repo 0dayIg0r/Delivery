@@ -19,8 +19,6 @@ const Forget = (data: Props) => {
         setTenant(data.tenant)
     }, [])
 
-    const router = useRouter()
-
     const handleSubmit = () => {
         
     }
