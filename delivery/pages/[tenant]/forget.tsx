@@ -20,7 +20,7 @@ const Forget = (data: Props) => {
     }, [])
 
     const handleSubmit = () => {
-        router.push(`/${data.tenant.slug}/forget-success`)
+        router.push(`/${data.tenant.slug}/success`)
     }
 
     const [email, setEmail] = useState('')
