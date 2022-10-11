@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { useFormatter } from '../../libs/useFormater'
 import styles from './styles.module.css'
 
 type Props = {
@@ -13,6 +14,8 @@ export const Quantity = ({ color, count, onUpdateCount, min, max }: Props) => {
 
   const [canRemove, setCanRemove] = useState(false)
   const [canAdd, setCanAdd] = useState(false)
+  
+  const formatter = useFormatter()
 
   useEffect(() => {
     setCanRemove((!min || (min && count > min)) ? true : false)
@@ -44,7 +47,7 @@ export const Quantity = ({ color, count, onUpdateCount, min, max }: Props) => {
         -
       </div>
       <div className={styles.qt}>
-        {count}
+        {formatter.formatQuantity(count, 2)}
       </div>
       <div
         className={styles.button}

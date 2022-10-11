@@ -65,7 +65,7 @@ const Product = (data: Props) => {
                     count={qtCount}
                     onUpdateCount={handleUpdateQt}
                     min={1}
-                    max={10}
+                  
                     />
                 </div>
                 <div
