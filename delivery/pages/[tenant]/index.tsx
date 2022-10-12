@@ -13,7 +13,7 @@ import { Tenant } from '../../types/Tenant'
 
 const Home = (data: Props) => {
   const { tenant, setTenant } = useAppContext()
-  const {setUser, setToken} = useAuthContext()
+ 
 
   useEffect(() => {
     setTenant(data.tenant)
