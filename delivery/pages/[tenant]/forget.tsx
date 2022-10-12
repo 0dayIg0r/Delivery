@@ -1,12 +1,11 @@
 import { GetServerSideProps } from 'next'
 import Head from 'next/head'
-import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import { Button } from '../../components/Button'
 import { Header } from '../../components/Header'
 import { InputField } from '../../components/InputField'
-import { useAppContext } from '../../contexts/AppContext'
+import { useAppContext } from '../../contexts/app'
 import { useApi } from '../../libs/useApi'
 
 import styles from '../../styles/Forget.module.css'
@@ -84,10 +83,10 @@ type Props = {
 export const getServerSideProps: GetServerSideProps = async (context) => {
     const { tenant: tenantSlug } = context.query
 
-    const api = useApi()
+    const api = useApi(tenantSlug as string)
 
     // get tenant
-    const tenant = await api.getTenant(tenantSlug as string)
+    const tenant = await api.getTenant()
 
     if (!tenant) {
         return {

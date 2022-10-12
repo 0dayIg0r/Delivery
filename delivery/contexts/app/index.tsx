@@ -25,3 +25,5 @@ export const Provider = ({children}: ProviderType) =>{
         </AppContext.Provider>
     )
 }
+
+export {useAppContext} from './hook'
