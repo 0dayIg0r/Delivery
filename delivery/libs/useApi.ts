@@ -7,7 +7,7 @@ const temporaryOneProduct: Product = {
     categoryName: 'Tradicional',
     name: 'Texas Burger',
     price: 25,
-    description: '2 blends blá blá'
+    description: ''
 }
 
 export const useApi = (tenantSlug: string) => ({

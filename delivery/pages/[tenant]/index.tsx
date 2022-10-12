@@ -4,6 +4,7 @@ import { Banner } from '../../components/Banner'
 import { ProductItem } from '../../components/ProductItem'
 import { SearchInput } from '../../components/SearchInput'
 import { useAppContext } from '../../contexts/app'
+import { useAuthContext } from '../../contexts/auth'
 import { useApi } from '../../libs/useApi'
 
 import styles from '../../styles/Home.module.css'
@@ -12,6 +13,7 @@ import { Tenant } from '../../types/Tenant'
 
 const Home = (data: Props) => {
   const { tenant, setTenant } = useAppContext()
+  const {setUser, setToken} = useAuthContext()
 
   useEffect(() => {
     setTenant(data.tenant)
