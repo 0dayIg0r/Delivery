@@ -1,6 +1,6 @@
-import { Button } from '../../components/Button'
+import { Button } from '../Button'
 import { Tenant } from '../../types/Tenant'
-import { useAuthContext } from '../auth'
+import { useAuthContext } from '../../contexts/auth'
 import styles from './styles.module.css'
 
 type Props = {
