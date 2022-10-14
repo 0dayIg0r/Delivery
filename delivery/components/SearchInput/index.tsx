@@ -20,7 +20,7 @@ export const SearchInput = ({ onSearch }: Props) => {
     return (
         <div
             className={styles.container}
-            style={{ borderColor: focused ? '#FF0000' : '#FFF' }}
+            style={{ borderColor: focused ? '#FB9400' : '#FFF' }}
         >
             <div
              className={styles.button}
