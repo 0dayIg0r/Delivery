@@ -11,23 +11,23 @@ const temporaryOneProduct: Product = {
     description: ''
 }
 
-export const useApi = (tenantSlug: string) => ({
+export const useApi = (tenantSlug?: string) => ({
     getTenant: async () => {
         switch (tenantSlug) {
             case 'TheBurger':
                 return {
                     slug: 'TheBurger',
                     name: 'TheBurger',
-                    mainColor: '#FF0000',
-                    secondColor: '#00FF00'
+                    mainColor: '#FB9400',
+                    secondColor: '#FFF9F2'
                 }
                 break
             case 'ThePizza':
                 return {
                     slug: 'ThePizza',
                     name: 'ThePizza',
-                    mainColor: '#0000FF',
-                    secondColor: '#FF0000'
+                    mainColor: '#6AB70A',
+                    secondColor: '#E0E0E0'
                 }
 
                 break
